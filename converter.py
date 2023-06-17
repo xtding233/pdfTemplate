@@ -34,8 +34,8 @@ class Converter:
         for name in config.sections():
             e = {}
             e.update({Header.name : name})
-            for k in list(config[Header.name].keys()):
-                e.update({k : config[Header.name][k]})
+            for k in list(config[name].keys()):
+                e.update({k : config[name][k]})
             elements += [e]
         return Converter.validate_elements(elements)
 
